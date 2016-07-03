@@ -4,7 +4,7 @@ IMAGE_B=$1
 PREFIX=$2
 VGG_WEIGHTS=${3-vgg16_weights.h5}
 HEIGHT=512
-PATCH_SIZE=3  # try 1 for less interesting, but faster-rendering effects
+PATCH_SIZE=1  # try 1 for less interesting, but faster-rendering effects
 SKULL_IMAGE_A=images/sugarskull-A.jpg
 SKULL_IMAGE_AP=images/sugarskull-Ap.jpg
 

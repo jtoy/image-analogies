@@ -8,7 +8,6 @@ https://github.com/awentzonline/image-analogies/releases/download/v0.0.5/vgg16_w
 and make sure the parameter `vgg_weights` matches the location of the file.
 '''
 import time
-
 import image_analogy.argparser
 import image_analogy.main
 
