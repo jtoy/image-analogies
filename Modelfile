@@ -1,0 +1,7 @@
+Inference:
+  command: bash wrapper.sh
+  parameters:
+    --example:
+      type: string
+    --text:
+      type: string
