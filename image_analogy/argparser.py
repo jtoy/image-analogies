@@ -16,13 +16,13 @@ class CommaSplitAction(argparse.Action):
 def parse_args():
     '''Parses command line arguments for the image analogy command.'''
     parser = argparse.ArgumentParser(description='Neural image analogies with Keras.')
-    parser.add_argument('--a_image_path', metavar='ref', type=str,
+    parser.add_argument('--a_image_path', dest='a_image_path', type=str,
                         help='Path to the reference image mask (A)')
-    parser.add_argument('--ap_image_path', metavar='base', type=str,
+    parser.add_argument('--ap_image_path', dest='ap_image_path', type=str,
                         help='Path to the source image (A\')')
-    parser.add_argument('--b_image_path', metavar='ref', type=str,
+    parser.add_argument('--b_image_path', dest='b_image_path', type=str,
                         help='Path to the new mask for generation (B)')
-    parser.add_argument('result_prefix', metavar='res_prefix', type=str,
+    parser.add_argument('--result_prefix', dest='result_prefix', type=str,
                         help='Prefix for the saved results (B\')')
     # size-related
     parser.add_argument('--width', dest='out_width', type=int,

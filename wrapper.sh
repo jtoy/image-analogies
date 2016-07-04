@@ -8,8 +8,8 @@ export PATH=$PATH:/usr/local/cuda-7.5/bin
 
 if [[ "$1" == "--example" ]]
 then
-    echo bash $2
+     bash $2
 else
-    echo make_image_analogy.py "$@"
+     make_image_analogy.py "$@"
 
 fi

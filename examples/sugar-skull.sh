@@ -2,7 +2,7 @@
 
 IMAGE_B=${1:-"images/sugarskull-B.jpg"}
 PREFIX=${2:-"/home/ubuntu/experiment/image-analogies/examples/out"}
-VGG_WEIGHTS=${3-vgg16_weights.h5}
+VGG_WEIGHTS=${3:-"/data/output/vgg16_weights.h5"}
 HEIGHT=512
 PATCH_SIZE=1  # try 1 for less interesting, but faster-rendering effects
 SKULL_IMAGE_A=images/sugarskull-A.jpg
@@ -27,4 +27,4 @@ make_image_analogy.py \
   --scales=3
 
 #copy latest image to /data/output
-cp `ls -t | head -1` /data/output/
+cp `ls -t $PREFIX/* | head -1` /data/output/
