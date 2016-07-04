@@ -1,7 +1,51 @@
 Inference:
-  command: bash wrapper.sh
+  command: make_image_analogy.py
   parameters:
-    --example:
+    -a_image_path:
+      type: file
+      flag: -a_image_path
+    -ap_image_path:
+       type: file
+       flag: -a_image_path
+    -b_image_path:
+      type: file
+      flag: -b_image_path
+    -output:
       type: string
-    --text:
+      default: '/home/'
+    -vgg-weights:
       type: string
+      required: True
+    -width:
+      type: integer
+      default: 0
+    -height:
+      type: integer
+      default: 0
+    -scales:
+      type: integer
+      default: 3
+    -min-scale:
+      type: float
+      default: 0.25
+    -a-scale-mode:
+      type: string
+    -a-scale:
+      type: float
+      default: 1.0
+    -iters:
+      type: integer
+      default: 5
+    -model:
+      type: string
+      default: patchmatch
+      choices: patchmatch,brute
+    -tv-w:
+      type: float
+      default: 1.0
+    -contrast:
+      type: string
+      default: 0.02
+
+
+
