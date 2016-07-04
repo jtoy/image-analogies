@@ -1,12 +1,12 @@
 #!/bin/bash
 
-IMAGE_B=${1:-"images/sugarskull-B.jpg"}
+IMAGE_B=${1:-"examples/images/sugarskull-B.jpg"}
 PREFIX=${2:-"/home/ubuntu/experiment/image-analogies/examples/out"}
 VGG_WEIGHTS=${3:-"/data/output/vgg16_weights.h5"}
 HEIGHT=512
-PATCH_SIZE=1  # try 1 for less interesting, but faster-rendering effects
-SKULL_IMAGE_A=images/sugarskull-A.jpg
-SKULL_IMAGE_AP=images/sugarskull-Ap.jpg
+PATCH_SIZE=2  # try 1 for less interesting, but faster-rendering effects
+SKULL_IMAGE_A=examples/images/sugarskull-A.jpg
+SKULL_IMAGE_AP=examples/images/sugarskull-Ap.jpg
 OUTPUT_PATH="/home/ubuntu/experiment/image-analogies/examples/out"
 
 echo "Make a sugar skull"
