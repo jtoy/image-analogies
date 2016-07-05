@@ -93,7 +93,7 @@ def main(args, model_class):
             else:
                 out_resize_shape = None
             img = img_utils.deprocess_image(np.copy(x), contrast_percent=args.contrast_percent,resize=out_resize_shape)
-            fname = args.result_prefix + '_at_iteration_{}_{}.png'.format(scale_i, i)
+            fname = args.result_prefix + '/image_at_iteration_{}_{}.png'.format(scale_i, i)
             imsave(fname, img)
             end_time = time.time()
             print('Image saved as {}'.format(fname))

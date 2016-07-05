@@ -1,49 +1,52 @@
 Inference:
   command: make_image_analogy.py
   parameters:
-    -a_image_path:
+    --a_image_path:
       type: file
-      flag: -a_image_path
-    -ap_image_path:
-       type: file
-       flag: -a_image_path
-    -b_image_path:
+      flag: --a_image_path
+      required: True
+    --ap_image_path:
       type: file
-      flag: -b_image_path
-    -output:
+      flag: --a_image_path
+      required: True
+    --b_image_path:
+      type: file
+      flag: --b_image_path
+      required: True
+    --output:
       type: string
-      default: '/home/'
-    -vgg-weights:
+      default: '/data/output'
+    --vgg-weights:
       type: string
       required: True
-    -width:
+    --width:
       type: integer
       default: 0
-    -height:
+    --height:
       type: integer
       default: 0
-    -scales:
+    --scales:
       type: integer
       default: 3
-    -min-scale:
+    --min-scale:
       type: float
       default: 0.25
-    -a-scale-mode:
+    --a-scale-mode:
       type: string
-    -a-scale:
+    --a-scale:
       type: float
       default: 1.0
-    -iters:
+    --iters:
       type: integer
       default: 5
-    -model:
+    --model:
       type: string
       default: patchmatch
       choices: patchmatch,brute
-    -tv-w:
+    --tv-w:
       type: float
       default: 1.0
-    -contrast:
+    --contrast:
       type: string
       default: 0.02
 

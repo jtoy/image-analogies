@@ -7,7 +7,7 @@ https://github.com/awentzonline/image-analogies/releases/download/v0.0.5/vgg16_w
 (source: https://gist.github.com/baraldilorenzo/07d7802847aaad0a35d3)
 and make sure the parameter `vgg_weights` matches the location of the file.
 '''
-import time
+import time,os
 import image_analogy.argparser
 import image_analogy.main
 
@@ -24,6 +24,9 @@ if __name__ == '__main__':
         start_time = time.time()
         try:
             image_analogy.main.main(args, model_class)
+            "Removing all images except latest"
+            os.system('rm `ls -t %s/* | tail -n +2`' % args.result_prefix)
+
         except KeyboardInterrupt:
             print('Shutting down...')
         print('Done after {:.2f} seconds'.format(time.time() - start_time))
