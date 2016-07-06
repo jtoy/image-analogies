@@ -1,5 +1,5 @@
 Inference:
-  command: make_image_analogy.py
+  command: make_image_analogy.py  --vgg-weights /data/model_cache/vgg16_weights.h5 --output /data/output
   parameters:
     --a_image_path:
       type: file
@@ -12,12 +12,6 @@ Inference:
     --b_image_path:
       type: file
       flag: --b_image_path
-      required: True
-    --output:
-      type: string
-      default: '/data/output'
-    --vgg-weights:
-      type: string
       required: True
     --width:
       type: integer
