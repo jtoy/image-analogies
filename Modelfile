@@ -49,6 +49,22 @@ Inference:
     --contrast:
       type: string
       default: 0.02
+    --output-full:
+      type: string
+      default: False
+      choices: True,False
+    --mrf-w:
+      type: float
+      default: 0.5
+    --b-content-w:
+      type: float
+      default: 0.0
+    --analogy-w:
+      type: float
+      default: 1.0
+
+
+
 
 
 

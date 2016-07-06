@@ -37,7 +37,8 @@ def parse_args():
                         default='none', help='Method of scaling A and A\' relative to B')
     parser.add_argument('--a-scale', dest='a_scale', type=float,
                         default=1.0, help='Additional scale factor for A and A\'')
-    parser.add_argument('--output-full', dest='output_full_size', action='store_true',
+    parser.add_argument('--output-full', dest='output_full_size', type='str',
+                        default='Flase',
                         help='Output all intermediate images at full size regardless of current scale.')
     # optimizer
     parser.add_argument('--iters', dest='num_iterations_per_scale', type=int,
