@@ -88,7 +88,7 @@ def main(args, model_class):
             if args.color_jitter:
                 x -= color_jitter
             # save the image
-            if args.output_full_size:
+            if args.output_full_size == 'True':
                 out_resize_shape = (full_img_height, full_img_width)
             else:
                 out_resize_shape = None
