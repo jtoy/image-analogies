@@ -26,7 +26,7 @@ if __name__ == '__main__':
             image_analogy.main.main(args, model_class)
             "Removing all images except latest"
             os.system('rm `ls -t %s/* | tail -n +2`' % args.result_prefix)
-            output = os.listdir('/data/output/')[1]
+            output = os.listdir('/data/output/')[0]
         except KeyboardInterrupt:
             print('Shutting down...')
         print('Done after {:.2f} seconds'.format(time.time() - start_time))
